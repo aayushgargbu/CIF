@@ -28,9 +28,9 @@ class Fuzz:
 #print(Fuzz.Fuzzer())
 #print(Fuzz.Fuzzer(1000, ord('a'), 26))
 
-for i in range(100):
-    mxLength = random.randrange(1, 200)
-    print('mxLength:', mxLength)
-    fuzzStr = Fuzz.Fuzzer(mxLength)
-    print('fuzzStr:', fuzzStr, ', length:', len(fuzzStr))
-    Fuzz.CrashIfExceeds(fuzzStr, 150)
+#for i in range(100):
+#    mxLength = random.randrange(1, 200)
+#    print('mxLength:', mxLength)
+#    fuzzStr = Fuzz.Fuzzer(mxLength)
+#    print('fuzzStr:', fuzzStr, ', length:', len(fuzzStr))
+#    Fuzz.CrashIfExceeds(fuzzStr, 150)
