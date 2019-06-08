@@ -24,3 +24,15 @@ class HeartBeatBug:
             return self.systemMemory[0:length]
         except Exception as exc:
             print(exc)
+    
+    def ChecknRespond(self, response, length):
+        try:
+            if len(response) != length:
+                return 'The length do not match with response.'
+            self.systemMemory = response + self.systemMemory
+            if len(self.systemMemory) < length:
+                while len(self.systemMemory) < length:
+                    self.systemMemory += self.uninitializedSystemMemory
+            return self.systemMemory[0:length]
+        except Exception as exc:
+            return exc
